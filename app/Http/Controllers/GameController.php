@@ -27,6 +27,20 @@ class GameController extends Controller
             'anio' => 1986,
             'descripcion' => 'Una aventura épica llena de exploración.'
         ],
+        4 => [
+        'id' => 4,
+        'titulo' => 'Pokémon Red & Blue',
+        'plataforma' => 'Game Boy',
+        'anio' => 1996,
+        'descripcion' => '¡Atrápalos a todos! Inicia tu aventura Pokémon en Kanto.'
+         ],
+         5 => [
+        'id' => 5,
+        'titulo' => 'Animal Crossing',
+        'plataforma' => 'Nintendo 64 / GameCube',
+        'anio' => 2001,
+        'descripcion' => 'Crea tu propio pueblo y vive una vida tranquila con animales simpáticos.'
+         ],
     ];
 
     // Muestra la lista de juegos

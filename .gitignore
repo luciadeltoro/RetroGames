@@ -1,3 +1,4 @@
+# Si da fallo subir borrando todo el contenido, y volver a pegarlo luego.
 *.log
 .DS_Store
 .env

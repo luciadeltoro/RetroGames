@@ -8,11 +8,6 @@
 </head>
 <body>
 
-    <header class="header">
-        <h1>🎮 RetroGame Hub</h1>
-        <p>Clásicos inolvidables del videojuego</p>
-    </header>
-
     <main class="container">
         @yield('contenido')
     </main>

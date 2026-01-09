@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1200px; /* aumentamos de 900px a 1200px */
     margin: 40px auto;
     background: #020617;
     padding: 30px;
@@ -37,3 +37,10 @@ body {
     color: #9ca3af;
 }
 
+/* Opcional: centramos el grid de tarjetas y evitamos superposición */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem; /* espacio entre tarjetas */
+    justify-items: center;
+}

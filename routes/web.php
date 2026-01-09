@@ -1,14 +1,10 @@
 <?php
-use App\Http\Controllers\GameController;
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GameController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Listado de juegos (home)
+Route::get('/', [GameController::class, 'index'])->name('games.index');
 
-// Ruta lista general de juegos
-Route::get('/games', [GameController::class, 'index']);
-
-// Ruta ficha de un juego
-Route::get('/games/{id}', [GameController::class, 'show']);
+// Ficha de un juego
+Route::get('/games/{id}', [GameController::class, 'show'])->name('games.show');

@@ -6,6 +6,11 @@
     @if ($game)
         <h2>{{ $game['titulo'] }}</h2>
 
+        @php $img = $game['image'] ?? asset('images/default-cover.png'); @endphp
+        <div style="max-width:520px;margin:18px 0;">
+            <img src="{{ $img }}" alt="{{ $game['titulo'] }} cover" class="detail-cover">
+        </div>
+
         <p><strong>Plataforma:</strong> {{ $game['plataforma'] }}</p>
         <p><strong>Año:</strong> {{ $game['anio'] }}</p>
 

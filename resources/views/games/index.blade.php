@@ -4,15 +4,21 @@
 
 @section('contenido')
     <h2>🎮 Lista de videojuegos retro</h2>
+    <p>Selecciona una carátula para ver la ficha del juego.</p>
 
-    <ul>
+    <div class="game-grid">
         @foreach ($games as $game)
-            <li>
-                <strong>{{ $game['titulo'] }}</strong>
-                ({{ $game['plataforma'] }} - {{ $game['anio'] }})
-                —
-                <a href="/games/{{ $game['id'] }}">Ver ficha</a>
-            </li>
+            @php $img = $game['image'] ?? asset('images/default-cover.png'); @endphp
+            <div class="game-card">
+                <a href="/games/{{ $game['id'] }}">
+                    <div class="cover-wrapper">
+                        <img src="{{ $img }}" alt="{{ $game['titulo'] }} cover" class="game-cover">
+                    </div>
+                    <div class="game-title">{{ $game['titulo'] }}
+                        <div style="font-weight:400;font-size:0.9rem;color:#6b7280">{{ $game['plataforma'] }} • {{ $game['anio'] }}</div>
+                    </div>
+                </a>
+            </div>
         @endforeach
-    </ul>
+    </div>
 @endsection

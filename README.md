@@ -1,5 +1,5 @@
 # 🎮 RetroGames – Laravel
-Creado por Lucia del Toro Lopez, Luis Capel Velázquez.
+Creado por Lucia del Toro Lopez y Luis Capel Velázquez.
 
 Proyecto realizado en **Laravel** que muestra una lista de videojuegos retro y el detalle de cada uno de ellos.  
 Los datos se gestionan de forma **estática desde el controlador**, simulando una base de datos.

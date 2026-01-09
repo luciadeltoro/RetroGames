@@ -1,5 +1,5 @@
 # RetroGame Hub
-
+Trabajo realizado por Lucía del Toro López y Luis Capel Velázquez.
 Proyecto Laravel que muestra un listado de videojuegos retro con fichas individuales y carátulas. Cada juego se presenta en tarjetas con imágenes, y al hacer clic se muestra la información completa del juego.
 
 ---
@@ -71,3 +71,12 @@ npm run build
 ```bash
 php artisan serve
 ```
+
+### 10. En caso de que sea necesario limpiar caché
+```bash
+php artisan config:cache
+php artisan route:cache
+php artisan view:clear
+```
+
+

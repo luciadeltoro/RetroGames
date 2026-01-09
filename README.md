@@ -16,11 +16,58 @@ Proyecto Laravel que muestra un listado de videojuegos retro con fichas individu
 
 ## Clonación del proyecto
 
-Clonar el repositorio y entrar en la carpeta:
+Clonar el repositorio:
 
 ```bash
 git clone https://github.com/luciadeltoro/RetroGames.git RetroGames
 ```
+## Configuración inicial
+### 1. Instalar dependencias PHP con Composer
+```bash
+composer install
+```
 
+### 2. Copiar .env.example a .env
+```bash
+cp .env.example .env
+```
 
+### 3. Crear una base de datos en MySQL e iniciar XAMPP
+```bash
+CREATE DATABASE IF NOT EXISTS retrogames;
+```
 
+### 4. Modificar .env
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3307 //Poner el puerto que necesites
+DB_DATABASE=retrogames
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 5. Ejecutar migraciones
+```bash
+php artisan migrate
+```
+
+### 6. Generar clave de Laravel
+```bash
+php artisan key:generate
+```
+
+### 7. Instalar dependencias Node y Vite/Tailwind
+```bash
+npm install
+```
+
+### 8. Compilar assets con Vite
+```bash
+npm run build
+```
+
+### 9. Levantar servidor de Laravel
+```bash
+php artisan serve
+```

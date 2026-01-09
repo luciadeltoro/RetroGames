@@ -45,7 +45,6 @@ class GameController extends Controller
         'anio' => 2001,
         'descripcion' => 'Crea tu propio pueblo y vive una vida tranquila con animales simpáticos.',
         'image' => '/images/AnimalCrossing.png'
-        
          ],
          6 => [
         'id' => 6,
@@ -54,7 +53,6 @@ class GameController extends Controller
         'anio' => 1999,
         'descripcion' => 'Combate crossover con los personajes más icónicos de Nintendo en batallas frenéticas.',
         'image' => '/images/SuperSmashBros.jpg'
-        
          ],
          
     ];
@@ -63,6 +61,14 @@ class GameController extends Controller
     public function index()
     {
         return view('games.index', [
+            'games' => $this->games
+        ]);
+    }
+
+    // Página principal con carrusel
+    public function home()
+    {
+        return view('welcome', [
             'games' => $this->games
         ]);
     }

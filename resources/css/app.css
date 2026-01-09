@@ -18,10 +18,21 @@ body {
 }
 
 .header {
-    background-color: #b91c1c; /* Rojo para el navegador */
+    background-color: #f53003; /* Rojo para el navegador */
     padding: 20px;
     text-align: center;
     color: #fff;
+}
+
+/* Aplicar también a elementos <nav> y <footer> por si se usan directamente */
+nav {
+    background-color: #f53003;
+    color: #ffffff;
+}
+
+footer {
+    background-color: #f53003;
+    color: #ffffff;
 }
 
 .container {
@@ -37,7 +48,7 @@ body {
     text-align: center;
     padding: 18px 12px;
     color: #fff;
-    background-color: #b91c1c; /* Rojo para el footer */
+    background-color: #f53003; /* Rojo para el footer */
 }
 
 /* Grid de carátulas */
@@ -68,7 +79,7 @@ body {
     width: 100%;
     aspect-ratio: 4 / 5; /* rectángulo vertical compacto (ancho:alto) */
     overflow: hidden;
-    background: #f9fafb;
+    background: #f8efe6; /* gris blanquecino cálido para las carátulas */
     max-height: 240px; /* limita altura para que sean compactas */
 }
 
@@ -80,10 +91,27 @@ body {
 }
 
 .detail-cover {
-    width: 100%;
-    height: auto;
+    width: 400px;
+    height: 400px;
     border-radius: 8px;
     object-fit: cover;
+    display: block;
+    margin: 8px auto;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 8px 12px;
+    background-color: #b91c1c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    background-color: #911313;
 }
 
 .game-title {
@@ -117,4 +145,68 @@ body {
         max-height: 170px;
     }
 }
+
+@media (max-width: 520px) {
+    .detail-cover {
+        width: 90vw;
+        height: auto;
+    }
+}
+
+/* Carousel styles for main page */
+.carousel {
+    width: 100%;
+    max-width: 1100px;
+    margin: 18px auto;
+    position: relative;
+}
+.carousel-track {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 12px;
+}
+.carousel-item {
+    flex: 0 0 auto;
+    width: 140px; /* tamaño compacto */
+    scroll-snap-align: center;
+    text-align: center;
+}
+.carousel-item img {
+    width: 140px;
+    height: 175px; /* rectángulo compacto */
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 8px auto;
+    background: #f8efe6; /* gris blanquecino cálido para items del carousel */
+}
+.carousel-item .caption {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #111827;
+}
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    pointer-events: none;
+}
+.carousel-btn {
+    pointer-events: auto;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.carousel-btn.left { position: absolute; left: 8px; }
+.carousel-btn.right { position: absolute; right: 8px; }
+
+/* Ensure header/footer styles match earlier definitions */
+.header { background-color: #f53003; color: #fff; }
+.footer { background-color: #f53003; color: #fff; padding: 12px; text-align: center; }
 

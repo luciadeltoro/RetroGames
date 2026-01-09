@@ -3,7 +3,7 @@
 @section('titulo', 'Listado de videojuegos')
 
 @section('contenido')
-    <h2>🎮 Lista de videojuegos retro</h2>
+    <h2>Lista de videojuegos retro</h2>
     <p>Selecciona una carátula para ver la ficha del juego.</p>
 
     <div class="game-grid">

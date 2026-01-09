@@ -9,7 +9,7 @@
 <body>
 
     <header class="header">
-        <h1>🎮 RetroGame Hub</h1>
+        <h1>RetroGame Hub</h1>
         <p>Clásicos inolvidables del videojuego</p>
     </header>
 
